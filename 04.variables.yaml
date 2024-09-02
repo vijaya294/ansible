@@ -4,6 +4,6 @@
     course: "Devops with AWS"
     duration: "120 hrs"
   tasks: printing information
-  - name: printing variables
-    ansible.builtin.debug:
-      msg: "Hi, ia m learning {{course}} {{duration}}"
+    - name: printing variables
+      ansible.builtin.debug:
+       msg: "Hi, ia m learning {{course}} {{duration}}"
