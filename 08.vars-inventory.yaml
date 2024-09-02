@@ -3,4 +3,4 @@
    tasks:
    - name: printing information
      ansible.builtin.debug:
-       msg : "learning : {{COURSE}}, time span : {{DURATION}}"
+       msg: "learning : {{COURSE}}, time span : {{DURATION}}"
