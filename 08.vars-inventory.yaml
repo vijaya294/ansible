@@ -1,6 +1,6 @@
  -name: variables to print
   hosts: web
   tasks:
-  - name: printing course information
+  - name: printing information
     ansible.builtin.debug:
-      msg : "learning : {{COURSE}}, time span : {{DURATION}}
+      msg : "learning : {{COURSE}}, time span : {{DURATION}}"
