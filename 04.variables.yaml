@@ -6,4 +6,21 @@
   tasks: 
   - name: printing variables
     ansible.builtin.debug:
-      msg: "Hi, ia m learning {{course}} {{duration}}"
+      msg: "Hi, ia m learning {{course}}, Duration is :  {{duration}}"
+
+
+# ansible-playbook -i inventory.ini -e ansible_user=ec2-user -e ansible_password=DevOps321 04.variables.yaml
+
+# PLAY [variables] *********************************************************************************************************************
+
+# TASK [Gathering Facts] ***************************************************************************************************************
+# ok: [172.31.47.221]
+
+# TASK [printing variables] ************************************************************************************************************
+# ok: [172.31.47.221] => {
+#     "msg": "Hi, ia m learning Devops with AWS 120 hrs"
+# }
+
+# PLAY RECAP ***************************************************************************************************************************
+# 172.31.47.221              : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
+
