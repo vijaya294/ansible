@@ -11,8 +11,8 @@
   - name: printing variable information again 
     vars:
       course: "ansible"
-      ansible.builtin.debug:
-        msg: "hi i am learning : {{course}}, duration is : {{duration}}"
+    ansible.builtin.debug:
+      msg: "hi i am learning : {{course}}, duration is : {{duration}}"
 
   - name: printing variable information again and again
     ansible.builtin.debug:
