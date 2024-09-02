@@ -1,0 +1,21 @@
+- name: multiple tasks using variables
+  hosts: web
+  vars:
+    course: "devops with aws"
+    duration: "120 hours"
+  tasks:
+  - name: printing variables information
+    ansible.builtin.debug:
+      msg: "hi i am learning : {{course}}, duration is : {{duration}}"
+
+  - name: printing variable information again 
+    vars:
+      course: "ansible"
+      ansible.builtin.debug:
+        msg: "hi i am learning : {{course}}, duration is : {{duration}}"
+
+  - name: printing variable information again and again
+    ansible.builtin.debug:
+       msg: "hi i am learning : {{course}}, duration is : {{duration}}"
+
+       
