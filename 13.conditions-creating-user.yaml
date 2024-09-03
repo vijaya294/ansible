@@ -1,10 +1,12 @@
 - name: conditions to create user
   hosts: web
+  become: yes
   tasks:
   - name: creating user
     ansible.builtin.command: id expense
     register: USER  #user is a variable that gets o/p from above command
+    ignore_errors: True
 
   - name: print user information
     ansible.builtin.debug:
-     msg: "user info is: {{name}}, {{password}}"
+      msg: "user info is: {{ USER }}"
