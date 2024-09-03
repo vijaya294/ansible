@@ -1,5 +1,5 @@
 - name: data types
-  hosts: web
+  hosts: local
   connection: local
   vars:
     COURSE: "devops with AWS"   #string
@@ -17,4 +17,21 @@
   - name: printing course information
     ansible.builtin.debug:
       msg: "Course name: {{COURSE}}, course duration: {{DURATION}}, live: {{LIVE}}, topics: {{TOPICS}}, tools: {{TOOLS}}"
+
+
+# ansible-playbook -i inventory.ini 11.data-types.yaml      
+
+# PLAY [data types] ********************************************************************************
+
+# TASK [Gathering Facts] ***************************************************************************
+# ok: [172.31.42.98]
+
+# TASK [printing course information] ***************************************************************
+# ok: [172.31.42.98] => {
+#     "msg": "Course name: devops with AWS, course duration: 120 hours, live: True, topics: ['Shell', 'Ansible', 'Linux'], tools: {'ci': 'jenkins', 'cm': 'ansible', 'cloud': 'aws'}"
+# }
+
+# PLAY RECAP ***************************************************************************************
+# 172.31.42.98               : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
+
     
