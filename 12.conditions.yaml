@@ -2,7 +2,7 @@
   hosts: web
   connection: local   #use this statement because we are not providing usernma eand password
   vars:
-    number: 25
+    number: 2
   tasks:
   - name: print this statement if given number is greater than or equal to 20
     ansible.builtin.debug:
@@ -14,3 +14,21 @@
       msg: "given number is less than 20"
     when: number | int < 20
   
+
+# PLAY [conditions] ********************************************************************************************************************
+
+# TASK [Gathering Facts] ***************************************************************************************************************
+# ok: [172.31.42.98]
+
+# TASK [print this statement if given number is greater than or equal to 20] ***********************************************************
+# ok: [172.31.42.98] => {
+#     "msg": "given number is greater than 20"
+# }
+
+# TASK [print this statement if given number is less than 20] **************************************************************************
+# skipping: [172.31.42.98]
+
+# PLAY RECAP ***************************************************************************************************************************
+# 172.31.42.98               : ok=2    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0
+
+
