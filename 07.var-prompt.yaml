@@ -9,3 +9,22 @@
   - name: printing the information
     ansible.builtin.debug:
       msg: "i am learning : {{COURSE}}, duration : {{DURATION}}"
+
+
+# ansible-playbook -i inventory.ini -e ansible_user=ec2-user -e ansible_password=DevOps321 07.var-prompt.yaml
+# please enter course name:
+# please enter time duration:
+
+# PLAY [variables from files] **********************************************************************************************************
+
+# TASK [Gathering Facts] ***************************************************************************************************************
+# ok: [172.31.47.221]
+
+# TASK [printing the information] ******************************************************************************************************
+# ok: [172.31.47.221] => {
+#     "msg": "i am learning : Devops with AWS, duration : 120 hours"
+# }
+
+# PLAY RECAP ***************************************************************************************************************************
+# 172.31.47.221              : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
+

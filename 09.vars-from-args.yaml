@@ -4,3 +4,20 @@
    - name: printing information
      ansible.builtin.debug:
        msg: "hello {{name}}, good {{greetings}}"
+
+
+# ansible-playbook -i inventory.ini -e ansible_user=ec2-user                                     -e ansible_password=DevOps321 09.vars-from-args.yaml -e "name=vijaya greetings=morning"
+# [WARNING]: Found variable using reserved name: name
+
+# PLAY [variables to print] ************************************************************************
+
+# TASK [Gathering Facts] ***************************************************************************
+# ok: [172.31.47.221]
+
+# TASK [printing information] **********************************************************************
+# ok: [172.31.47.221] => {
+#     "msg": "hello vijaya, good morning"
+# }
+
+# PLAY RECAP ***************************************************************************************
+# 172.31.47.221              : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescue                                    d=0    ignored=0

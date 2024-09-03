@@ -18,4 +18,32 @@
     ansible.builtin.debug:
        msg: "hi i am learning : {{course}}, duration is : {{duration}}"
 
+
+# ansible-playbook -i inventory.ini -e ansible_user=ec2-user -e ansible_password=DevOps321 05.multiple-tasks-vars.yaml
+
+# PLAY [multiple tasks using variables] ************************************************************************************************
+
+# TASK [Gathering Facts] ***************************************************************************************************************
+# ok: [172.31.47.221]
+
+# TASK [printing variables information] ************************************************************************************************
+# ok: [172.31.47.221] => {
+#     "msg": "hi i am learning : devops with aws, duration is : 120 hours"
+# }
+
+# TASK [printing variable information again] *******************************************************************************************
+# ok: [172.31.47.221] => {
+#     "msg": "hi i am learning : ansible, duration is : 120 hours"
+# }
+
+# TASK [printing variable information again and again] *********************************************************************************
+# ok: [172.31.47.221] => {
+#     "msg": "hi i am learning : devops with aws, duration is : 120 hours"
+# }
+
+# PLAY RECAP ***************************************************************************************************************************
+# 172.31.47.221              : ok=4    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
+
+
+
        
