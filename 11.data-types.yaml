@@ -1,5 +1,5 @@
 - name: data types
-  hosts: local
+  hosts: web
   connection: local
   vars:
     COURSE: "devops with AWS"   #string
