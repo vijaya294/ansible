@@ -1,7 +1,7 @@
 - name: conditions to create user
   hosts: web
   vars_prompt:
-    name: "please enter user name"
+  - name: "please enter user name"
     password: "please enter password"
   tasks:
   - name: creating user
