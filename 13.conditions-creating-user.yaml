@@ -1,8 +1,8 @@
 - name: conditions to create user
   hosts: web
   vars_prompt:
-    user_name: please enter user name
-    password: please enter password
+    name: "please enter user name"
+    password: "please enter password"
   tasks:
   - name: creating user
     ansible.builtin.command: id expense
@@ -10,4 +10,4 @@
 
   - name: print user information
     ansible.builtin.debug:
-     msg: "user info is: {{USER}}"
+     msg: "user info is: {{name}}, {{password}}"
