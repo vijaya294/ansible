@@ -1,5 +1,5 @@
 - name: data types
-  hosta: local
+  hosts: local
   vars:
     COURSE: "devops with AWS"   #string
     DURATION: 120 hours         #numbers
