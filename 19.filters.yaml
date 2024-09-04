@@ -53,6 +53,18 @@
     ansible.builtin.debug:
       msg: " Min: {{ numbers | min }}, Max: {{ numbers | max}}"
 
+# TASK [to get min and max numbers] ****************************************************************************************************
+# ok: [172.31.38.167] => {
+#     "msg": " Min: 1, Max: 67"
+
+  - name: convert map to lost
+    vars:
+      course:
+        name: "Devops with AWS"
+        duration: 120
+    ansible.builtin.debug:
+      msg: "{{ course | dict2items}}"
+
 
 
 
