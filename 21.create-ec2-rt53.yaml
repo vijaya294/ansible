@@ -30,4 +30,17 @@
     # acccess key  :  AKIAW3MECQB25WNID3OB
     # secret key  :  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
     # give these credentials in SP and region : us-east-1 and the command is : aws configure
-    
+    # follw the command : ansible-playbook -i inventory.ini 21.create-ec2-rt53.yaml
+
+    # o/p is  :   TASK [create ec2 instance] ***********************************************************************************************************
+#                 ok: [172.31.38.167] => (item=frontend)
+#                 ok: [172.31.38.167] => (item=backend)
+#                 ok: [172.31.38.167] => (item=mysql)
+
+# so 3 servers are created
+
+  - name: print the output
+    ansible.builtin.debug:
+      msg: "{{ ec2_instances }}"
+
+
