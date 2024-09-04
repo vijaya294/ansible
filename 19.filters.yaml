@@ -87,6 +87,23 @@
       -  { "key": "duration", "value": 120 }        
     ansible.builtin.debug:
       msg: "{{ course | items2dict }}"
+
+
+# TASK [convert list to map] ***********************************************************************************************************
+# ok: [172.31.38.167] => {
+#     "msg": {
+#         "duration": 120,
+#         "name": "Devops with AWS"
+#     }
+# }
+
+
+  - name: checking ip addresses
+    vars: 
+      ip: 123:234:54:1
+    ansible.builtin.debug:
+      msg: "{{ ip | ansible.utils.ipv4 }}"
+
     
 
 
