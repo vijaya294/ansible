@@ -1,6 +1,6 @@
 - name: creating ec2 instances and route 53 records
-  hosts: mylocal
-  connection: mylocal
+  hosts: web
+  connection: web
   vars: 
     subnet_id: "subnet-0da9660e21811cf96"
     sg_id: "sg-068011fe9c7d758b6"
