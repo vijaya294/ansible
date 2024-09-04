@@ -20,3 +20,14 @@
       image_id: "{{ ami_id }}"
     loop: "{{ instances }}"
     register: ec2_instances
+
+    # if you run this script SP will ask you to install python dependencies called botocore and boto3 [because if you want to connect ansible to aws you need to install python dependencies like boto3 and botocore]
+    # command: ansible --version
+    # pip3.9 install boto3 botocore
+    # now you will get unable to locate credentials because inorder to connect to aws you need some credentials like access key and secure key
+    # goto aws console  --  iam  --  access management  --  users  --  create user  --  user name:ansible  --  attach policies directly  --  policy name:administration access  --  next  --  create user
+    # goto ansible  --  security credentials  --  create access key  --  command line interface
+    # acccess key  :  AKIAW3MECQB25WNID3OB
+    # secret key  :  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
+    # give these credentials in SP and region : us-east-1 and the command is : aws configure
+    
