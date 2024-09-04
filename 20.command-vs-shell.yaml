@@ -1,6 +1,6 @@
 - name: command vs shell
   hosts: web
-  connections: local
+  connection: local
   vars:
   tasks:
   - name: execute the command
