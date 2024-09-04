@@ -32,7 +32,6 @@
       msg: " {{ greetings | lower }}"
 
 
-
 # PLAY [filters or functions] **********************************************************************************************************
 
 # TASK [Gathering Facts] ***************************************************************************************************************
@@ -60,7 +59,7 @@
   - name: unique numbers
     vars: 
       numbers: [1,2,3,4,5,4,3,2,1]
-    ansible.buitlin.debug:
+    ansible.builtin.debug:
       msg: " {{ numbers | unique }}"
 
 
