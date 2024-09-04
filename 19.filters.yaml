@@ -1,0 +1,7 @@
+- name: filters or functions
+  hosts: local
+  connection: local
+  tasks: 
+  - name: declaring default variable
+    ansible.builtin.debug:
+      msg: "Learning {{ course | default('Ansible') }}"
