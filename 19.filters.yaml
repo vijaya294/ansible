@@ -29,7 +29,7 @@
   vars:
     greetings: "hello vijaya"
   ansible.builtin.debug:
-    msg: {{ greetings | lower }}
+    msg: "{{ greetings | lower }}"
 
 
 
