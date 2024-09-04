@@ -5,3 +5,31 @@
   - name: declaring default variable
     ansible.builtin.debug:
       msg: "Learning {{ course | default('Ansible') }}"
+
+# PLAY [filters or functions] **********************************************************************************************************
+
+# TASK [Gathering Facts] ***************************************************************************************************************
+# ok: [172.31.38.167]
+
+# TASK [declaring default variable] ****************************************************************************************************
+# ok: [172.31.38.167] => {
+#     "msg": "Learning Ansible"
+# }
+
+# PLAY RECAP ***************************************************************************************************************************
+# 172.31.38.167              : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
+
+- name: converting lower case to upper case
+  vars: 
+    greetings: "Hello Vijaya"
+  ansible.builtin.debug:
+    msg: "{{ greetings | upper }}"
+
+- name: converting upper case to lower case
+  vars:
+    greetings: "hello vijaya"
+  ansible.builtin.debug:
+    msg: {{ greetings | lower}}
+
+
+
