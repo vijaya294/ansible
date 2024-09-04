@@ -1,5 +1,5 @@
 - name: filters or functions
-  hosts: local
+  hosts: web
   connection: local
   tasks: 
   - name: declaring default variable
