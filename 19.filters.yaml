@@ -65,9 +65,28 @@
     ansible.builtin.debug:
       msg: "{{ course | dict2items}}"
 
+# TASK [convert map to lost] ***********************************************************************************************************
+# ok: [172.31.38.167] => {
+#     "msg": [
+#         {
+#             "key": "name",
+#             "value": "Devops with AWS"
+#         },
+#         {
+#             "key": "duration",
+#             "value": 120
+#         }
+#     ]
+# }
 
 
-
-
+  - name: convert list to map
+    vars: 
+      course:
+        { "key": "name", "value": "Devops with AWS" },
+        { "key": "duration", "value": 120 }        
+    ansible.builtin.debug:
+      msg: "{{ course | dict2list }}"
+    
 
 
