@@ -86,7 +86,7 @@
       -  { "key": "name", "value": "Devops with AWS" }
       -  { "key": "duration", "value": 120 }        
     ansible.builtin.debug:
-      msg: "{{ course | dict2list }}"
+      msg: "{{ course | list2dict }}"
     
 
 
